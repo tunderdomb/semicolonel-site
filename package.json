@@ -1,13 +1,17 @@
 {
-  "name": "silentcloud",
+  "name": "semicolonel",
   "version": "0.0.1",
-  "description": "silentcloud site\r ================",
+  "description": "semicolonel site",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "tunderdomb@gmail.com",
   "license": "private",
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "glob": "~4.0.6",
     "marked": "~0.3.2",
