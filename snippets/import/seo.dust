@@ -1,0 +1,5 @@
+{?description}<meta name="description" content="{description}">{/description}
+{?keywords}
+{! Google don't use keywords, but other might do  !}
+  <meta name="keywords" content="{keywords}">
+{/keywords}

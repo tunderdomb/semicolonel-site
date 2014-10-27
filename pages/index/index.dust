@@ -1,0 +1,18 @@
+{>"layouts/page"/}
+{<head}
+  <link rel="stylesheet" href="/static/css/index.css"/>
+{/head}
+{<body}
+  {>"snippets/header/index"/}
+  <main>
+    <div class="wrap">
+      <h1>Semi<em>;</em>Colonel</h1>
+      <h2>It's dangerous to code alone</h2>
+    </div>
+  </main>
+  {>"pages/index/background"/}
+{/body}
+{<js}
+  <script type="text/javascript" src="/static/js/Processing.js/processing.min.js"></script>
+  <script type="text/javascript" src="/static/js/background/bg-processing.js"></script>
+{/js}

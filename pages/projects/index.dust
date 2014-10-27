@@ -1,0 +1,21 @@
+{>"layouts/page"/}
+{<head}
+  <link rel="stylesheet" href="/static/css/project-index.css"/>
+{/head}
+{<body}
+  {>"snippets/header/index"/}
+  <main>
+    {>"snippets/page-banner/index" title="Creationalism" subtitle="We are what we make"/}
+    <ul class="wrap">
+      {#projects}
+        <li class="project-thumb">
+          <a href="/projects/{.dir}" class="name">{.name}</a>
+          <span class="main-category {.type}">{.type}</span>
+          <p class="description">
+            {.description}
+          </p>
+        </li>
+      {/projects}
+    </ul>
+  </main>
+{/body}

@@ -1,0 +1,12 @@
+<html lang="en_US" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>{?title}{title} | {/title}silentcloud</title>
+  {>"snippets/import/viewport"/}
+  {+head}{/head}
+</head>
+<body>
+{+body}{/body}
+{+js}{/js}
+</body>
+</html>

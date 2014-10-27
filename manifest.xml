@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app>
+
+  <!-- SITE DETAILS -->
+  <site>
+    <domain>hello</domain>
+  </site>
+
+  <!-- CONTEXT -->
+  <!--<context>
+  </context>-->
+
+  <favicon root="static/favicon"/>
+
+  <!-- STATIC CONTENT -->
+  <static>
+    <content url="/static" path="static"/>
+  </static>
+
+  <preprocess>
+    <stylus compress="true" browsers="last 3 versions, Android >= 2.2">
+      <css root="style/" src="style/*.styl" dest="static/css" watch="style/**/*.styl"/>
+    </stylus>
+  </preprocess>
+
+  <engines>
+    <engine name="builtin:dust"/>
+    <set option="views" value="./"/>
+    <set option="view cache" value="false"/>
+  </engines>
+
+  <!-- reload browser -->
+  <livereload>
+    <watch pattern="static/**/*.css"/>
+    <watch pattern="static/**/*.js"/>
+    <watch pattern="pages/**/*.dust"/>
+    <watch pattern="layouts/**/*.dust"/>
+    <watch pattern="snippets/**/*.dust"/>
+    <watch pattern="projects/**/*.md"/>
+    <watch pattern="pages/**/*.md"/>
+  </livereload>
+
+  <!-- reload server -->
+  <monitor>
+    <watch pattern="app/**/*.js"/>
+    <watch pattern="projects/**/*.js"/>
+  </monitor>
+
+  <!-- PAGES -->
+  <routes>
+    <!-- the page tag can be self enclosing -->
+    <!-- the name, url and the template or handler fields are required -->
+    <!--<route url="/" template="asd" context="views/pages/index/context"/>-->
+    <route name="index" url="/" template="pages/index" handler="app/routes/index"/>
+    <route name="projects" url="/projects/:project" template="pages/projects/profile" handler="app/routes/project-profile"/>
+    <route name="projects" url="/projects" template="pages/projects" handler="app/routes/projects"/>
+    <route name="bio" url="/bio" template="pages/bio" handler="app/routes/bio"/>
+  </routes>
+
+  <run development="false" open="false">
+    <port start="8000"/>
+  </run>
+</app>

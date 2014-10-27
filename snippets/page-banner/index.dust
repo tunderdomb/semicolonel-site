@@ -1,0 +1,13 @@
+<header>
+  <div class="banner" layout="align-center">
+    <div stick="fill"
+         class="banner-img"
+         {?bannerImg}style="background-image: url('{bannerImg}')"{/bannerImg}></div>
+    <div class="wrap">
+      <h1>{title}</h1>
+      {?subtitle}
+        <h2 class="description">{subtitle}</h2>
+      {/subtitle}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,28 @@
+{?.social}
+  <script type="text/javascript">
+    !function ( w, d, plugins ){
+      function inject( id, plugin ){
+        if ( d.getElementById(id) ) return;
+        var s = d.createElement('script');
+        s.async = true, s.src = plugin, s.id = id, d.body.appendChild(s)
+      }
+
+      function onload(){
+        for ( var id in plugins ) {
+          if ( plugins.hasOwnProperty(id) ) inject(id, plugins[id])
+        }
+      }
+
+      if ( w.addEventListener ) {
+        w.addEventListener("load", onload, false)
+      }
+      else {
+        w.attachEvent("onload", onload)
+      }
+    }(window, document, {
+      {@for:social}
+      "{$key}": "{$value}",
+      {/for}
+    })
+  </script>
+{/.social}

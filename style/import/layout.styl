@@ -1,0 +1,25 @@
+@import "../global/media"
+
+[layout]{display: flex}
+[layout~="align-center"]{align-items: center}
+[layout~="align-start"]{align-items: flex-start}
+[layout~="align-end"]{align-items: flex-end}
+[layout~="align-stretch"]{align-items: stretch}
+[layout~="center"]{justify-content: center}
+[layout~="row"]{flex-direction: row}
+[layout~="column"]{flex-direction: column}
+[layout~="wrap"]{flex-wrap: wrap}
+[layout~="no-wrap"]{flex-wrap: nowrap}
+[layout~="wrap-reverse"]{flex-wrap: wrap-reverse}
+[flex]{flex: 1}
+
+.wrap
+  width: 100%
+  max-width: 100%
+  margin: 0 auto
+  /*@media tablet
+    width tablet-width
+  @media tablet-landscape
+    width tablet-landscape-width*/
+  @media desktop
+    width desktop-min-width

@@ -1,0 +1,21 @@
+<header id="site-header" fixed="to-top" layout="align-center">
+  <nav class="wrap" layout="row center">
+    <ul layout="row">
+      <li>
+        <a href="/projects">projects</a>
+      </li>
+      <li>
+        <a href="/bio">me</a>
+      </li>
+      <li>
+        <a href="/">;</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://semicolonel.tumblr.com/">blog</a>
+      </li>
+      <li>
+        <a href="mailto:tunderdomb@gmail.com?Subject=Hello" target="_blank">contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>

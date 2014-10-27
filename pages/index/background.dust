@@ -1,0 +1,3 @@
+<div id="background">
+  <canvas id="background-canvas"></canvas>
+</div>

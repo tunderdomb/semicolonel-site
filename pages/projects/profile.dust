@@ -1,0 +1,33 @@
+{>"layouts/page" title="projects"/}
+{<head}
+  <link rel="stylesheet" href="/static/css/project-profile.css"/>
+{/head}
+{<body}
+  {>"snippets/header/index"/}
+  {#project}
+    <main>
+      {>"snippets/page-banner/index" title=name subtitle=description/}
+      <div layout="row" class="wrap">
+        <aside>
+          <ul class="links">
+            {#.links}
+              <li>
+                <a href="{.url}"{?.external} target="_blank"{/.external}>{.title}</a>
+              </li>
+            {/.links}
+          </ul>
+          <ul class="tags">
+            {#.tags}
+              <li>
+                {.}
+              </li>
+            {/.tags}
+          </ul>
+        </aside>
+        <article>
+          {.article|s}
+        </article>
+      </div>
+    </main>
+  {/project}
+{/body}

@@ -1,0 +1,15 @@
+{>"layouts/page"/}
+{<head}
+  <link rel="stylesheet" href="/static/css/bio.css"/>
+{/head}
+{<body}
+  {>"snippets/header/index"/}
+  <main>
+    {>"snippets/page-banner/index" title="Human interface" subtitle="After the rain comes sun, after the sun comes rain again"/}
+    <div class="wrap">
+      <article>
+        {.article|s}
+      </article>
+    </div>
+  </main>
+{/body}
